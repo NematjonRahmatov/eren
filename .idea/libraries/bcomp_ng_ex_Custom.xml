@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bcomp-ng-ex-Custom">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/bcomp-ng-ex-Custom.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

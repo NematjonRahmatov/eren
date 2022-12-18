@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="eren:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/eren_jar</output-path>
+    <root id="archive" name="eren.jar">
+      <element id="module-output" name="eren" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/bcomp-ng-ex-Custom.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

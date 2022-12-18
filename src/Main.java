@@ -1,20 +1,22 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
 
-        abdu<Integer, Void> xx = ll -> null;
-        abdu<Integer, Integer> l = x -> x * x;
+        Abdu<Integer, Void> xx = ll -> null;
+        Abdu<Integer, Integer> l = x -> x * x;
+        Abdu<Integer, Integer> pr = Math::abs;
         System.out.println(l.apply(5));
         System.out.println(xx.apply(5));
+        System.out.println(pr.apply(-51));
 
         Classes cl = new Classes();
         Classes1 cl1 = new Classes1();
         Classes2 cl2 = new Classes2();
         Classes3 cl3 = new Classes3();
         Classes4 cl4 = new Classes4();
-
 
         /*cl = cl1;
         cl = cl4;
@@ -35,10 +37,12 @@ public class Main {
         lcl.add(cl1);
         lcl.add(cl2);
         lcl.add(cl3);
-        abdu<ArrayList<Classes>, Integer> kn = (Main::KolN);
+        Abdu<ArrayList<Classes>, Integer> kn = (Main::KolN);
         System.out.println(kn.apply(lcl));
         AddN(lcl2);
         System.out.println(lcl2.size());
+
+        lcl.forEach(System.out::println);
     }
 
     public static int KolN(ArrayList<? extends Classes> ar){        /*Co-variation*/
@@ -54,5 +58,28 @@ public class Main {
             ar.add(new Classes4());
         }
     }
+
+    public Ans testm(int x){
+        Ans s = new Ans();
+        s.n = 1;
+        s.b = true;
+        return s;
+    }
+
+    public List<Integer> testmm(int x){
+        List<Integer> l = new ArrayList<>();
+        l.add(1);
+        l.add(2);
+        return l;
+    }
+
 }
-interface abdu<T, R>{R apply(T t);}  /* R apply   ---Коварианты возвращаемых типов данных */
+interface Abdu<T, R> {
+    R apply(T t);  /* R apply   */
+}
+
+class Ans{
+    int n;
+    boolean b;
+
+}
